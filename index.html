@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Private Cocktail Menu · 盏盏</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#f9f7f4; font-family:"Noto Serif CJK SC","Songti SC",Georgia,serif; color:#3d2e1e; line-height:1.6; }
+.page-header { text-align:center; padding:72px 24px 48px; }
+.page-title { font-size:11px; letter-spacing:16px; color:#b0a090; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; font-weight:300; text-transform:uppercase; margin-bottom:14px; cursor:pointer; user-select:none; }
+.page-title .hint { display:block; font-size:9px; letter-spacing:2px; color:#c8c0b8; margin-top:6px; opacity:0; transition:opacity .3s; }
+.page-subtitle { font-size:10px; letter-spacing:4px; color:#c0b0a0; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; font-weight:300; }
+.divider { width:32px; height:1px; background:#d0c8bc; margin:28px auto 0; }
+.cards { max-width:640px; margin:0 auto; padding:0 40px 80px; }
+.card { display:flex; align-items:flex-start; gap:0; padding:28px 0; border-bottom:1px solid #ece8e2; cursor:pointer; }
+.card:last-child { border-bottom:none; }
+.card:hover .card-name-zh { color:#8a7060; }
+.card-seq { min-width:32px; padding-top:6px; font-size:11px; color:#c8c0b8; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; font-weight:300; }
+.card-main { flex:1; min-width:0; }
+.card-top { display:grid; grid-template-columns:1fr auto; align-items:flex-start; gap:0 14px; margin-bottom:8px; }
+.card-name-group { min-width:0; }
+.card-name-zh { font-size:20px; font-weight:600; color:#3d2e1e; letter-spacing:1px; transition:color .15s; line-height:1.4; }
+.card-name-en { font-size:9px; color:#b0a090; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; letter-spacing:2px; text-transform:uppercase; margin-top:4px; }
+.card-tags { display:flex; gap:5px; flex-wrap:nowrap; align-items:center; padding-top:5px; }
+.card-tag { font-size:10px; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; color:#a09080; background:#f0ece4; padding:3px 10px; border-radius:20px; letter-spacing:.5px; }
+.card-divider { width:20px; height:1px; background:#ddd5cc; margin:10px 0 12px; }
+.card-note { font-size:14px; line-height:1.9; color:#8a7a68; font-style:italic; }
+.page-footer { text-align:center; padding:40px 24px 60px; font-size:10px; color:#c0b0a0; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; letter-spacing:3px; }
+@media(max-width:600px){.cards{padding:0 20px 60px}.page-header{padding:56px 20px 36px}}
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="page-title" id="title">Private Cocktail Menu<span class=hint id="hint"></span></div>
+  <div class="page-subtitle">by 盏盏</div>
+  <div class="divider"></div>
+</header>
+
+<main class="cards">
+<article class=card onclick="location.href='detail.html#hakuna_martini'">
+  <div class=card-seq>01</div>
+  <div class=card-main>
+    <div class=card-top>
+      <div class=card-name-group>
+        <div class=card-name-zh>哈库纳玛塔塔</div>
+        <div class=card-name-en>Hakuna Matata</div>
+      </div>
+      <div class=card-tags><span class=card-tag>☀️ 晴天</span></div>
+    </div>
+    <div class=card-divider></div>
+    <p class=card-note>一杯关于无忧无虑的鸡尾酒，清爽带着微苦，喝一口就像走在阳光正好的下午。</p>
+  </div>
+</article>
+<article class=card onclick="location.href='detail.html#manchester_by_sea'">
+  <div class=card-seq>02</div>
+  <div class=card-main>
+    <div class=card-top>
+      <div class=card-name-group>
+        <div class=card-name-zh>海边的曼彻斯特</div>
+        <div class=card-name-en>Manchester by the Sea</div>
+      </div>
+      <div class=card-tags><span class=card-tag>❄️ 雪天</span></div>
+    </div>
+    <div class=card-divider></div>
+    <p class=card-note>雪一直下，什么都没有释怀。</p>
+  </div>
+</article>
+<article class=card onclick="location.href='detail.html#misty_lady'">
+  <div class=card-seq>03</div>
+  <div class=card-main>
+    <div class=card-top>
+      <div class=card-name-group>
+        <div class=card-name-zh>薄暮佳人</div>
+        <div class=card-name-en>Misty Lady</div>
+      </div>
+      <div class=card-tags><span class=card-tag>🌙 薄暮</span></div>
+    </div>
+    <div class=card-divider></div>
+    <p class=card-note>薄暮，是天光与夜色交接的那一刻——什么都还没结束，什么都还来得及。</p>
+  </div>
+</article>
+<article class=card onclick="location.href='detail.html#sisyphus'">
+  <div class=card-seq>04</div>
+  <div class=card-main>
+    <div class=card-top>
+      <div class=card-name-group>
+        <div class=card-name-zh>西西弗斯</div>
+        <div class=card-name-en>Sisyphus</div>
+      </div>
+      <div class=card-tags><span class=card-tag>🔥 热烈</span></div>
+    </div>
+    <div class=card-divider></div>
+    <p class=card-note>石头会落下，但推它的人不会停。</p>
+  </div>
+</article>
+<article class=card onclick="location.href='detail.html#ma'">
+  <div class=card-seq>05</div>
+  <div class=card-main>
+    <div class=card-top>
+      <div class=card-name-group>
+        <div class=card-name-zh>間</div>
+        <div class=card-name-en>Ma</div>
+      </div>
+      <div class=card-tags><span class=card-tag>☁️ 阴天</span></div>
+    </div>
+    <div class=card-divider></div>
+    <p class=card-note>留白处的力量。</p>
+  </div>
+</article>
+
+</main>
+
+<footer class="page-footer">
+  ── 盏盏私人酒单 ──
+</footer>
+
+<script>
+var clicks=0;
+var title=document.getElementById("title");
+var hint=document.getElementById("hint");
+title.addEventListener("click",function(){
+  clicks++;
+  if(clicks>=3){
+    location.href="detail.html#zombie";
+  } else {
+    var msgs=["再点 "+(3-clicks)+" 次…","你确定要打开这扇门？","…这可不是普通酒单"];
+    hint.textContent=msgs[clicks-1];
+  }
+});
+</script>
+
+</body>
+</html>

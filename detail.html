@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>酒谱</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#fafaf8; font-family:"Noto Serif CJK SC","Songti SC",Georgia,serif; color:#3d2e1e; line-height:1.8; }
+.back { position:fixed; top:14px; left:14px; z-index:200; }
+.back a { display:inline-flex; align-items:center; gap:4px; text-decoration:none; color:#a09080; font-size:10px; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; letter-spacing:1px; background:rgba(249,247,244,.92); padding:6px 10px; border-radius:20px; backdrop-filter:blur(10px); box-shadow:0 2px 8px rgba(61,46,30,.08); }
+.back a:hover { color:#3d2e1e; }
+.back svg { width:11px; height:11px; }
+.detail-content { max-width:540px; margin:0 auto; padding:52px 20px 80px; }
+.detail-hero { width:100%; border-radius:14px; overflow:hidden; box-shadow:0 3px 20px rgba(61,46,30,.1); background:#ede8e2; margin-bottom:36px; }
+.detail-hero img { width:100%; height:auto; display:block; }
+.detail-top { display:flex; flex-direction:column; align-items:center; cursor:pointer; }
+.detail-name { font-size:26px; font-weight:700; color:#3d2e1e; letter-spacing:2px; margin-bottom:6px; text-align:center; }
+.detail-note { font-size:14px; line-height:2; color:#7a6a58; font-style:italic; text-align:center; margin:0 0 14px; }
+.flavor { font-size:11px; color:#a09080; letter-spacing:3px; text-align:center; margin-bottom:26px; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; }
+.tags-row { display:flex; gap:7px; justify-content:center; flex-wrap:wrap; margin-bottom:34px; }
+.tag { font-size:10px; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; color:#a09080; background:#f0ebe4; padding:4px 12px; border-radius:20px; letter-spacing:.5px; }
+.divider { width:36px; height:1px; background:#d0c8bc; margin:0 auto 36px; }
+.section-title { font-size:9px; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; color:#b0a090; letter-spacing:4px; text-transform:uppercase; text-align:center; margin-bottom:16px; }
+.recipe-grid { display:flex; flex-wrap:wrap; gap:7px; justify-content:center; margin-bottom:36px; }
+.recipe-item { font-size:12px; color:#6a5a48; background:#f2ede6; padding:5px 13px; border-radius:22px; }
+.story { font-size:13px; line-height:2.2; color:#6a5a48; }
+.not-found { text-align:center; padding:120px 0; color:#9a8a7a; font-size:16px; }
+@media(max-width:600px){.detail-content{padding:20px 16px 60px}.detail-name{font-size:22px}}
+
+/* dark mode for zombie */
+body.dark { background:#1a1510; color:#c8b8a8; }
+body.dark .back a { color:#8a7a6a; background:rgba(26,21,16,.9); }
+body.dark .back a:hover { color:#e8d8c8; }
+body.dark .detail-content { color:#c8b8a8; }
+body.dark .detail-name { color:#e8d8c8; }
+body.dark .detail-note { color:#9a8a7a; }
+body.dark .flavor { color:#7a6a5a; }
+body.dark .tag { color:#8a7a6a; background:#2a2520; }
+body.dark .divider { background:#3a3028; }
+body.dark .section-title { color:#7a6a5a; }
+body.dark .recipe-item { color:#a09080; background:#2a2520; }
+body.dark .story { color:#9a8a7a; }
+body.dark .detail-hero { background:#2a2520; box-shadow:0 3px 20px rgba(0,0,0,.4); }
+@media(max-width:600px){.detail-content{padding:20px 16px 60px}.detail-name{font-size:22px}}
+</style>
+</head>
+<body>
+<div id="detail"></div>
+<script>
+var COCKTAILS=[{"slug": "hakuna_martini", "name": "哈库纳玛塔塔 · Hakuna Matata", "note": "一杯关于无忧无虑的鸡尾酒，清爽带着微苦，喝一口就像走在阳光正好的下午。", "story": "「哈库纳玛塔塔」——斯瓦希里语，意思是「没有烦恼」。这杯酒喝下去就是那个阳光正好的下午，清爽、微苦、无忧无虑。", "flavor": "清爽 · 西柚微苦 · 接骨木花甜", "recipe": ["伏特加", "西柚汁", "接骨木花糖浆", "柠檬汁", "蜂蜜", "苦精"], "tags": ["☀️ 晴天"], "image": "hakuna_martini.jpg"}, {"slug": "manchester_by_sea", "name": "海边的曼彻斯特 · Manchester by the Sea", "note": "雪一直下，什么都没有释怀。", "story": "Lee没有好起来。结局他一个人坐在窗边，雪一直下，什么都没有释怀。 这杯酒用蝶豆花，它的颜色会变——杯底是深蓝，像结了冰的海；被柠檬拉成粉紫色，像退潮后裸露的沙滩。喝下去的过程就是颜色变化的过程，也是情绪慢慢浮现的过程。 海盐是故意的，Isle of Harris Gin本来就有海盐和海藻的矿物感，让这杯酒属于那种冷冽的、有一点点涩的海。不是热情的那种，是英格兰北部冬天的那种。 最后窗边那场雪，下在酒里。 ❄️", "flavor": "冷冽 · 海盐矿物 · 蝶豆花清香", "recipe": ["Isle of Harris Gin", "法式味美思", "接骨木糖浆", "橙味苦精", "蝶豆花水", "海盐", "气泡水"], "tags": ["❄️ 雪天"], "image": "manchester_by_sea.jpg"}, {"slug": "misty_lady", "name": "薄暮佳人 · Misty Lady", "note": "薄暮，是天光与夜色交接的那一刻——什么都还没结束，什么都还来得及。", "story": "龙舌兰的烟熏是叹息， Mezcal 的草本是犹豫，西柚的微苦与接骨木花香的余韵，是那一点被夜色挽留的光。", "flavor": "烟熏 · 接骨木花香 · 微苦回甘", "recipe": ["龙舌兰 Blanco", "Mezcal", "接骨木花糖浆", "西柚汁", "柠檬汁"], "tags": ["🌙 薄暮"], "image": "misty_lady_final.jpg"}, {"slug": "sisyphus", "name": "西西弗斯 · Sisyphus", "note": "石头会落下，但推它的人不会停。", "story": "正午的阳光最刺眼，石头从山顶滚到山脚，推它的人没停。这是荒谬，这是热烈，这是西西弗斯的宿命——不是因为有意义才推，是因为推本身就是意义。", "flavor": "烟熏 · 绵密 · 橙香清苦", "recipe": ["洗威士忌（奶洗后）", "泥煤威士忌", "君度", "鲜橙汁", "橙皮", "安哥斯图拉苦精"], "tags": ["🔥 热烈"], "image": "sisyphus.jpg"}, {"slug": "ma", "name": "間 · Ma", "note": "留白处的力量。", "story": "日本美学最核心的字——間。不是空，是空出来的位置。不是停，是停下来的意义。焙茶和芝麻之间的沉默，阴天云层之间的空隙，喝完这一口之后什么都没发生的那个瞬间——都是間。零甜度，不讨好，让它空着。", "flavor": "焙煎 · 芝麻烤香 · 柚子清亮", "recipe": ["芝麻油洗麦烧酎", "冷萃焙茶", "新鲜柚子汁"], "tags": ["☁️ 阴天"], "image": "ma.jpg"}, {"slug": "linger", "name": "烬 · Linger", "note": "不是什么热烈的东西。是一杯喝下去会让人觉得\"今天天气真好\"的酒。Aperol 的苦橙是午后阳光的质感，蜂蜜压住苦，柠檬提亮，剩下的是回味里的那一点苦——不扫兴，是有层次的结尾。", "story": "", "flavor": "明亮 · 苦橙温润 · 蜜甜收尾", "recipe": ["London Dry Gin", "Aperol", "Cointreau", "柠檬汁", "蜂蜜糖浆", "安哥斯图拉苦精"], "tags": ["❄️ 黄昏"], "image": "linger.jpg"}, {"slug": "manchester_by_sea", "name": "Manchester by the Sea（海边的曼彻斯特）", "note": "雪一直下，什么都没有释怀。", "story": "Lee没有好起来。结局他一个人坐在窗边，雪一直下，什么都没有释怀。 这杯酒用蝶豆花，它的颜色会变——杯底是深蓝，像结了冰的海；被柠檬拉成粉紫色，像退潮后裸露的沙滩。喝下去的过程就是颜色变化的过程，也是情绪慢慢浮现的过程。 海盐是故意的，Isle of Harris Gin本来就有海盐和海藻的矿物感，让这杯酒属于那种冷冽的、有一点点涩的海。不是热情的那种，是英格兰北部冬天的那种。 最后窗边那场雪，下在酒里。 ❄️", "flavor": "", "recipe": ["Isle of Harris Gin", "法式味美思", "接骨木糖浆", "橙味苦精", "蝶豆花水", "海盐", "气泡水"], "tags": [], "image": "manchester_by_sea.jpg"}, {"slug": "sisyphus", "name": "西西弗斯 · Sisyphus", "note": "（待补充）", "story": "", "flavor": "（待补充）", "recipe": ["洗威士忌（奶洗后）", "泥煤威士忌", "君度", "鲜橙汁", "橙皮", "安哥斯图拉苦精"], "tags": ["（待补充）"], "image": "sisyphus.jpg"}, {"slug": "spring_rain", "name": "Spring Rain（春雨）", "note": "春天夜里悄悄落的一场雨——不是瓢泼，是风把雨丝吹进窗缝，湿漉漉的，但不冷。像洗完澡披着毯子坐在窗边听雨，什么都不想。", "story": "", "flavor": "安静 · 清新 · 植物感", "recipe": ["Gin（伦敦干金）", "槐花蜜", "青柠汁", "甜罗勒", "黄瓜片", "苏打水"], "tags": ["🌧 春雨"], "image": ""}, {"slug": "sunny_bubble", "name": "Sunny Bubble（阳光气泡）", "note": "（待补充）", "story": "", "flavor": "", "recipe": ["（待补充）"], "tags": [], "image": ""}, {"slug": "thunderstorm", "name": "雷暴雨 · Thunderstorm", "note": "憋了一整天的那口气，终于随着一声闷雷落下来。这杯是雷暴雨——不是破坏，是释放。", "story": "雷暴雨来临之前，空气是静止的。所有人都在等。等那一声闷雷，等雨落下来，等一个出口。这杯酒就是那个瞬间——不是毁灭，是憋了一整天之后终于可以呼吸的那口气。薰衣草镇静，紫罗兰沉静，剩下的是风暴过境之后的干净。", "flavor": "烟熏 · 紫罗兰 · 风暴释放", "recipe": ["泥煤威士忌", "紫罗兰利口酒", "薰衣草糖浆", "柠檬汁", "蛋白", "安哥斯图拉苦精"], "tags": ["⛈️ 雷暴雨"], "image": "thunderstorm.jpg"}, {"slug": "zombie", "name": "僵尸 · Zombie（Hidden）", "note": "起死回生。不是复活，是消失之后又回来，带着三倍的热度和热带的风。", "story": "传说这杯酒喝完会起死回生。三种朗姆叠加，热带果汁打底，百香果和茉莉在最后浮上来——不是死亡，是消失之后又回来，带着海风的味道。", "flavor": "暗黑 · 泥煤朗姆 · 热带余温", "recipe": ["白朗姆", "金朗姆", "黑朗姆", "菠萝汁", "百香果糖浆", "茉莉花糖浆", "青柠汁"], "tags": ["🌴 隐藏酒单"], "image": "zombie.jpg"}];
+var el=document.getElementById("detail");
+var c=COCKTAILS.find(function(x){return x.slug===location.hash.slice(1);});
+if(!c){
+  el.innerHTML='<div class=not-found>找不到这杯酒。<br><br><a href="index.html" style="color:#9a8a7a;">&larr; 返回酒单</a></div>';
+}else{
+  document.title=c.name;
+  if(c.slug==='zombie'){document.body.classList.add('dark');}
+  var tagsHtml='';
+  if(c.tags&&c.tags.length){c.tags.forEach(function(t){if(t.trim())tagsHtml+='<span class=tag>'+t.trim()+'</span>';});}
+  var flavorHtml=c.flavor?'<div class=flavor>'+c.flavor+'</div>':'';
+  var recipeHtml='';
+  if(c.recipe&&c.recipe.length){
+    recipeHtml='<div class=section-title>配方</div><div class=recipe-grid>';
+    c.recipe.forEach(function(item){recipeHtml+='<span class=recipe-item>'+item+'</span>';});
+    recipeHtml+='</div>';
+  }
+  var storyHtml=c.story?'<div class=section-title>释义</div><p class=story>'+c.story+'</p>':'';
+  el.innerHTML='<div class=back><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>返回</a></div>'+
+    '<div class=detail-content>'+
+    '<div class=detail-top onclick=&quot;location.href=&apos;index.html&apos;&quot; title="点击返回">'+
+    '<div class=detail-hero>'+(c.image?'<img src="cocktails/'+c.image+'" alt="'+c.name+'">':'')+'</div>'+
+    '<div class=detail-name>'+c.name+'</div>'+
+    '</div>'+
+    flavorHtml+
+    (c.note?'<p class=detail-note>'+c.note+'</p>':'')+
+    (tagsHtml?'<div class=tags-row>'+tagsHtml+'</div>':'')+
+    '<div class=divider></div>'+
+    (recipeHtml||'')+
+    (storyHtml||'')+
+    '</div>';
+}
+</script>
+</body>
+</html>
