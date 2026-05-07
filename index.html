@@ -36,201 +36,99 @@
     margin: 0 auto;
     padding: 40px 48px 80px;
   }
-  .c-card {
-    position: relative;
-    padding-top: 64px;
-    padding-bottom: 56px;
-    border-bottom: 1px solid #ddd2c2;
-  }
+  .c-card { position: relative; padding-top: 64px; padding-bottom: 56px; border-bottom: 1px solid #ddd2c2; }
   .c-card:last-child { border-bottom: none; }
   .c-num {
-    position: absolute;
-    top: -2px; right: 0;
-    font-size: 72px;
-    font-weight: 700;
-    color: #ece8e0;
-    line-height: 1;
+    position: absolute; top: -2px; right: 0;
+    font-size: 72px; font-weight: 700;
+    color: #ece8e0; line-height: 1;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    letter-spacing: -3px;
-    user-select: none;
+    letter-spacing: -3px; user-select: none;
   }
-  .c-img-wrap {
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 16px;
-    background: #f0ebe2;
-  }
-  .c-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: sepia(0.03) saturate(0.95) brightness(1.02);
-  }
-  .c-img-placeholder {
-    width: 100%; min-height: 160px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 36px;
-    background: #ece8e0;
-  }
+  .c-img-wrap { width: 100%; overflow: hidden; margin-bottom: 16px; background: #f0ebe2; }
+  .c-img { width: 100%; height: auto; display: block; filter: sepia(0.03) saturate(0.95) brightness(1.02); }
   .c-info { padding-left: 0; }
-  .c-name {
-    font-size: 17px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    color: #3d2e1a;
-    margin-bottom: 8px;
-    line-height: 1.3;
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    flex-wrap: wrap;
-    font-family: 'Noto Serif CJK SC', 'Georgia', serif;
-  }
-  .c-name-en {
-    font-size: 9px;
-    font-weight: 300;
-    letter-spacing: 3px;
-    color: #a89880;
-    font-family: 'Georgia', serif;
-    font-style: italic;
-    text-transform: uppercase;
-  }
+  .c-name { font-size: 17px; font-weight: 400; letter-spacing: 3px; color: #3d2e1a; margin-bottom: 8px; line-height: 1.3; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; font-family: 'Noto Serif CJK SC', 'Georgia', serif; }
+  .c-name-en { font-size: 9px; font-weight: 300; letter-spacing: 3px; color: #a89880; font-family: 'Georgia', serif; font-style: italic; text-transform: uppercase; }
   .c-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; align-items: center; }
-  .c-tag {
-    font-size: 8px;
-    letter-spacing: 2px;
-    color: #8a7a64;
-    border: 1px solid #c8bca8;
-    padding: 2px 7px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-  }
+  .c-tag { font-size: 8px; letter-spacing: 2px; color: #8a7a64; border: 1px solid #c8bca8; padding: 2px 7px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-transform: uppercase; }
   .c-spirit { color: #9a8a70; border-color: #b8aa90; }
   .c-abv { font-size: 9px; letter-spacing: 2px; color: #b8a078; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .c-garnish { font-size: 9px; color: #9a8a78; letter-spacing: 1px; margin-bottom: 6px; font-style: italic; font-family: 'Georgia', serif; }
-  .c-note {
-    font-size: 12px;
-    color: #5a4830;
-    line-height: 1.8;
-    font-style: italic;
-    font-family: 'Noto Serif CJK SC', 'Georgia', serif;
-    margin-bottom: 8px;
-  }
-  .c-origin {
-    font-size: 9px;
-    color: #a09888;
-    letter-spacing: 0.5px;
-    line-height: 1.8;
-    margin-bottom: 10px;
-    font-style: italic;
-    font-family: 'Georgia', serif;
-    padding-left: 10px;
-    border-left: 1px solid #ddd2c2;
-  }
-  .c-recipe {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    flex-wrap: wrap;
-    padding-top: 8px;
-    border-top: 1px solid #ede8de;
-  }
-  .c-recipe-label {
-    font-size: 7px;
-    letter-spacing: 3px;
-    color: #c0b4a4;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    flex-shrink: 0;
-  }
-  .c-recipe-text {
-    font-size: 10px;
-    color: #8a7a68;
-    letter-spacing: 1px;
-    font-family: 'Georgia', serif;
-  }
-  .footer {
-    text-align: center;
-    padding: 32px 0 48px;
-    font-size: 8px;
-    letter-spacing: 5px;
-    color: #c0b4a4;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-  }
-  /* ── Mobile: single column ── */
+  .c-note { font-size: 12px; color: #5a4830; line-height: 1.8; font-style: italic; font-family: 'Noto Serif CJK SC', 'Georgia', serif; margin-bottom: 8px; }
+  .c-origin { font-size: 9px; color: #a09888; letter-spacing: 0.5px; line-height: 1.8; margin-bottom: 10px; font-style: italic; font-family: 'Georgia', serif; padding-left: 10px; border-left: 1px solid #ddd2c2; }
+  .c-recipe { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; padding-top: 8px; border-top: 1px solid #ede8de; }
+  .c-recipe-label { font-size: 7px; letter-spacing: 3px; color: #c0b4a4; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-transform: uppercase; flex-shrink: 0; }
+  .c-recipe-text { font-size: 10px; color: #8a7a68; letter-spacing: 1px; font-family: 'Georgia', serif; }
+  .footer { text-align: center; padding: 32px 0 48px; font-size: 8px; letter-spacing: 5px; color: #c0b4a4; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-transform: uppercase; }
   @media (max-width: 680px) {
     .cards { grid-template-columns: 1fr; gap: 0; padding: 28px 20px 60px; }
     .page-header { padding: 36px 20px 24px; }
     .c-num { font-size: 40px; }
-    .c-img-wrap { margin-bottom: 12px; }
-    .c-name { font-size: 17px; gap: 8px; }
-    .c-name-en { font-size: 9px; }
-    .c-note { font-size: 13px; }
   }
 </style>
 </head>
 <body>
   <div class="page-header"><h1>Private Cocktail Menu</h1></div>
   <div class="cards">
+    <!-- 01 哈库纳玛塔塔 -->
     <div class="c-card">
       <span class="c-num">01</span>
-      <div class="c-img-wrap"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAErAH0DASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGB//EACMQAAIBBAIDAQEAAAAAAAAAAAECAwQFERIhMUFhcf/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EABsRAAICAwEAAAAAAAAAAAAAAAABAgMRITFB/9oADAMBAAIRAxEAPwDdLVdKdqoo6WnkjSSNFZ3kVmLkKASQMDJ+mJ5rT3GrrLdUQ2mCjkljmaNZHZnV0LKGAxyMj5j+ciW+8WGy0VNaqG0wRUVPHHDDFCoCqqgAY+gBjxlbbr3cLngbhd7pLJM4MkszuzOx8ZJJ/GW5V6RGK2N5b7hcaC30dHTxwxz1EkkjKZZGYk5P4GAAMeB4zL1tN7prfUV1wvdRJJTwPK8cMahWKqSQCfB+cxiu1R4z//2Q==" class="c-img"></div>
+      <div class="c-img-wrap"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect fill='%23f7f0e4' width='400' height='240'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23c8b898' font-size='48' font-family='serif'%3E☀️%3C/text%3E%3C/svg%3E" class="c-img"></div>
       <div class="c-info">
-        <h2 class="c-name"><span class="c-name-zh">哈库纳玛塔塔！</span><span class="c-name-en">Hakuna Matata</span></h2>
-        <div class="c-tags"><span class="c-tag">晴天</span><span class="c-tag">Coupe</span><span class="c-tag c-spirit">伏特加</span><span class="c-abv">14.9%</span></div>
-        <p class="c-garnish">garnish: 西柚角 / 橙皮苦精</p>
-        <p class="c-note">「无忧无虑，晴天正好」</p>
-        <p class="c-origin">斯瓦希里语里有句老话——Hakuna Matata，意思是「无忧无虑」。</p>
-        <div class="c-recipe">
-          <span class="c-recipe-label">recipe</span>
-          <span class="c-recipe-text">伏特加 / 西柚汁 / 接骨木花糖浆 / 柠檬汁 / 蜂蜜 / 苦精</span>
-        </div>
+        <h2 class="c-name"><span class="c-name-zh">哈库纳玛塔塔</span><span class="c-name-en">Hakuna Matata</span></h2>
+        <div class="c-tags"><span class="c-tag">☀️ 晴天</span><span class="c-tag c-spirit">伏特加</span></div>
+        <p class="c-note">「一杯关于无忧无虑的鸡尾酒，清爽带着微苦，喝一口就像走在阳光正好的下午。」</p>
+        <p class="c-origin">斯瓦希里语——Hakuna Matata，意思是「没有烦恼」。</p>
+        <div class="c-recipe"><span class="c-recipe-label">recipe</span><span class="c-recipe-text">伏特加 / 西柚汁 / 接骨木花糖浆 / 柠檬汁 / 蜂蜜 / 苦精</span></div>
       </div>
     </div>
+    <!-- 02 海边的曼彻斯特 -->
     <div class="c-card">
       <span class="c-num">02</span>
-      <div class="c-img-wrap"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAARCAErAH0DASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGB//EACMQAAIBBAIDAQEAAAAAAAAAAAECAwQFERIhMUFhcf/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EABsRAAICAwEAAAAAAAAAAAAAAAABAgMRITFB/9oADAMBAAIRAxEAPwDdLVdKdqoo6WnkjSSNFZ3kVmLkKASQMDJ+mJ5rT3GrrLdUQ2mCjkljmaNZHZnV0LKGAxyMj5j+ciW+8WGy0VNaqG0wRUVPHHDDFCoCqqgAY+gBjxlbbr3cLngbhd7pLJM4MkszuzOx8ZJJ/GW5V6RGK2N5b7hcaC30dHTxwxz1EkkjKZZGYk5P4GAAMeB4zL1tN7prfUV1wvdRJJTwPK8cMahWKqSQCfB+cxiu1R4z//2Q==" class="c-img"></div>
+      <div class="c-img-wrap"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect fill='%23e8edf4' width='400' height='240'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%2398a8b8' font-size='48' font-family='serif'%3E❄️%3C/text%3E%3C/svg%3E" class="c-img"></div>
       <div class="c-info">
-        <h2 class="c-name"><span class="c-name-zh">薄暮佳人</span></h2>
-        <div class="c-tags"><span class="c-tag">阴天</span><span class="c-tag">矮脚宽体杯（方冰）</span><span class="c-abv">20.4%</span></div>
-        <p class="c-garnish">garnish: 西柚皮拧香</p>
-        <p class="c-note">「薄暮时分，空气里的潮湿味」</p>
-        <p class="c-origin">薄暮时分，光线刚刚柔软下来，一切还没真正暗下去。</p>
-        <div class="c-recipe">
-          <span class="c-recipe-label">recipe</span>
-          <span class="c-recipe-text">金酒 / 干味美思 / 蓝柑橘酒 / 柠檬汁 / 糖浆</span>
-        </div>
+        <h2 class="c-name"><span class="c-name-zh">海边的曼彻斯特</span><span class="c-name-en">Manchester by the Sea</span></h2>
+        <div class="c-tags"><span class="c-tag">❄️ 雪天</span><span class="c-tag c-spirit">金酒</span></div>
+        <p class="c-note">「雪一直下，什么都没有释怀。」</p>
+        <p class="c-origin">Lee没有好起来。结局他一个人坐在窗边，雪一直下，什么都没有释怀。这杯酒用蝶豆花，颜色会变——杯底是深蓝，像结了冰的海；被柠檬拉成粉紫色，像退潮后裸露的沙滩。</p>
+        <div class="c-recipe"><span class="c-recipe-label">recipe</span><span class="c-recipe-text">金酒 / 蝶豆花水 / 昆布正山小种海盐溶液 / 苏打水</span></div>
       </div>
     </div>
+    <!-- 03 薄暮佳人 -->
     <div class="c-card">
       <span class="c-num">03</span>
-      <div class="c-img-wrap"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAARCAErAH0DASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGB//EACMQAAIBBAIDAQEAAAAAAAAAAAECAwQFERIhMUFhcf/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EABsRAAICAwEAAAAAAAAAAAAAAAABAgMRITFB/9oADAMBAAIRAxEAPwDdLVdKdqoo6WnkjSSNFZ3kVmLkKASQMDJ+mJ5rT3GrrLdUQ2mCjkljmaNZHZnV0LKGAxyMj5j+ciW+8WGy0VNaqG0wRUVPHHDDFCoCqqgAY+gBjxlbbr3cLngbhd7pLJM4MkszuzOx8ZJJ/GW5V6RGK2N5b7hcaC30dHTxwxz1EkkjKZZGYk5P4GAAMeB4zL1tN7prfUV1wvdRJJTwPK8cMahWKqSQCfB+cxiu1R4z//2Q==" class="c-img"></div>
+      <div class="c-img-wrap"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect fill='%23ede0d4' width='400' height='240'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23b89878' font-size='48' font-family='serif'%3E🌙%3C/text%3E%3C/svg%3E" class="c-img"></div>
       <div class="c-info">
-        <h2 class="c-name"><span class="c-name-zh">雪国来信</span><span class="c-name-en">Letter from Snow Country</span></h2>
-        <div class="c-tags"><span class="c-tag">雪天</span><span class="c-tag">古典杯</span><span class="c-tag c-spirit">伏特加</span><span class="c-abv">16.0%</span></div>
-        <p class="c-garnish">garnish: 柠檬皮 / 迷迭香</p>
-        <p class="c-note">「从一片白色的地方寄来的消息」</p>
-        <p class="c-origin">冷杉的气息、雪松的灰烬，和一点点温暖的回忆。</p>
-        <div class="c-recipe">
-          <span class="c-recipe-label">recipe</span>
-          <span class="c-recipe-text">伏特加 / 白味美思 / 迷迭香糖浆 / 柠檬汁</span>
-        </div>
+        <h2 class="c-name"><span class="c-name-zh">薄暮佳人</span><span class="c-name-en">Misty Lady</span></h2>
+        <div class="c-tags"><span class="c-tag">🌙 薄暮</span><span class="c-tag c-spirit">梅斯卡尔</span></div>
+        <p class="c-note">「薄暮，是天光与夜色交接的那一刻——什么都还没结束，什么都还来得及。」</p>
+        <p class="c-origin">龙舌兰的烟熏是叹息，Mezcal的草本是犹豫，西柚的微苦与接骨木花香的余韵，是那一点被夜色挽留的光。</p>
+        <div class="c-recipe"><span class="c-recipe-label">recipe</span><span class="c-recipe-text">龙舌兰 / 梅斯卡尔 / 接骨木花糖浆 / 西柚汁 / 柠檬汁</span></div>
       </div>
     </div>
+    <!-- 04 西西弗斯 -->
     <div class="c-card">
       <span class="c-num">04</span>
-      <div class="c-img-wrap"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAARCAErAH0DASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGB//EACMQAAIBBAIDAQEAAAAAAAAAAAECAwQFERIhMUFhcf/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EABsRAAICAwEAAAAAAAAAAAAAAAABAgMRITFB/9oADAMBAAIRAxEAPwDdLVdKdqoo6WnkjSSNFZ3kVmLkKASQMDJ+mJ5rT3GrrLdUQ2mCjkljmaNZHZnV0LKGAxyMj5j+ciW+8WGy0VNaqG0wRUVPHHDDFCoCqqgAY+gBjxlbbr3cLngbhd7pLJM4MkszuzOx8ZJJ/GW5V6RGK2N5b7hcaC30dHTxwxz1EkkjKZZGYk5P4GAAMeB4zL1tN7prfUV1wvdRJJTwPK8cMahWKqSQCfB+cxiu1R4z//2Q==" class="c-img"></div>
+      <div class="c-img-wrap"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect fill='%23f0e4d4' width='400' height='240'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23c87848' font-size='48' font-family='serif'%3E🔥%3C/text%3E%3C/svg%3E" class="c-img"></div>
       <div class="c-info">
-        <h2 class="c-name"><span class="c-name-zh">花知道</span><span class="c-name-en">The Flower Knows</span></h2>
-        <div class="c-tags"><span class="c-tag">春天</span><span class="c-tag">碟形杯（Coupe）</span><span class="c-tag c-spirit">金酒</span><span class="c-abv">14.0%</span></div>
-        <p class="c-garnish">garnish: 可食用花瓣</p>
-        <p class="c-note">「不用问花，它自己会告诉你」</p>
-        <p class="c-origin">当花瓣落在酒杯里，你才会明白，有些季节是不需要语言的。</p>
-        <div class="c-recipe">
-          <span class="c-recipe-label">recipe</span>
-          <span class="c-recipe-text">金酒 / 接骨木花利口酒 / 玫瑰糖浆 / 柠檬汁 / 蛋清</span>
-        </div>
+        <h2 class="c-name"><span class="c-name-zh">西西弗斯</span><span class="c-name-en">Sisyphus</span></h2>
+        <div class="c-tags"><span class="c-tag">🔥 热烈</span><span class="c-tag c-spirit">威士忌</span></div>
+        <p class="c-note">「石头会落下，但推它的人不会停。」</p>
+        <p class="c-origin">正午的阳光最刺眼，石头从山顶滚到山脚，推它的人没停。这是荒谬，这是热烈，这是西西弗斯的宿命——不是因为有意义才推，是因为推本身就是意义。</p>
+        <div class="c-recipe"><span class="c-recipe-label">recipe</span><span class="c-recipe-text">红茶黄油洗威士忌 / 泥煤威士忌 / 君度 / 鲜橙汁 / 橙皮 / 苦精</span></div>
+      </div>
+    </div>
+    <!-- 05 間 -->
+    <div class="c-card">
+      <span class="c-num">05</span>
+      <div class="c-img-wrap"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect fill='%23e8e4dc' width='400' height='240'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23909088' font-size='48' font-family='serif'%3E☁️%3C/text%3E%3C/svg%3E" class="c-img"></div>
+      <div class="c-info">
+        <h2 class="c-name"><span class="c-name-zh">間</span><span class="c-name-en">Ma</span></h2>
+        <div class="c-tags"><span class="c-tag">☁️ 阴天</span><span class="c-tag c-spirit">麦烧酎</span></div>
+        <p class="c-note">「留白处的力量。」</p>
+        <p class="c-origin">日本美学最核心的字——間。不是空，是空出来的位置。不是停，是停下来的意义。焙茶和芝麻之间的沉默，阴天云层之间的空隙，喝完这一口之后什么都没发生的那个瞬间——都是間。零甜度，不讨好，让它空着。</p>
+        <div class="c-recipe"><span class="c-recipe-label">recipe</span><span class="c-recipe-text">芝麻油洗麦烧酎 / 冷萃焙茶 / 新鲜柚子汁</span></div>
       </div>
     </div>
   </div>
